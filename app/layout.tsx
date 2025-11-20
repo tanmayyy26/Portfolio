@@ -11,9 +11,8 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 import { ClientBackground } from "@/components/client-background"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Portfolio",
+  description: "Professional Portfolio Website",
 }
 
 export default function RootLayout({
