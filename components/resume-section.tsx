@@ -96,10 +96,10 @@ function ExperienceGrid() {
 
 function EducationGrid() {
   const items = [
-    { title: "Full Stack Web Development Bootcamp", subtitle: "2023 · Online Course Platform" },
-    { title: "Front-end Track", subtitle: "2022 · Codecademy" },
-    { title: "Programming Course", subtitle: "2020 – 2021 · Online Course" },
-    { title: "Certified Web Developer", subtitle: "2019 · Tech Institute" },
+    { title: "Full Stack Web Development Bootcamp", subtitle: "Online Course Platform" },
+    { title: "Front-end Track", subtitle: "Codecademy" },
+    { title: "Programming Course", subtitle: "Online Course" },
+    { title: "Certified Web Developer", subtitle: "Tech Institute" },
   ]
   return (
     <div className="relative">
