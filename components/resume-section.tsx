@@ -80,10 +80,10 @@ function Card({
 
 function ExperienceGrid() {
   const items = [
-    { title: "Full Stack Developer", subtitle: "2022 – Present · Tech Solutions Inc." },
-    { title: "Front-End Developer Intern", subtitle: "Summer 2021 · Web Design Studio" },
-    { title: "Freelance Web Developer", subtitle: "2020 – 2021 · E-commerce Startup" },
-    { title: "Teaching Assistant", subtitle: "2019 – 2020 · Tech Academy" },
+    { title: "Full Stack Developer", subtitle: "Tech Solutions Inc." },
+    { title: "Front-End Developer Intern", subtitle: "Web Design Studio" },
+    { title: "Freelance Web Developer", subtitle: "E-commerce Startup" },
+    { title: "Teaching Assistant", subtitle: "Tech Academy" },
   ]
   return (
     <div className="grid gap-4 sm:grid-cols-2">
