@@ -169,6 +169,14 @@ function CertificatesGrid() {
       pdfUrl: "/images/certificates/deloitte-cyber.pdf",
       icon: "🔒",
     },
+    {
+      title: "Completion Certificate: Forage Virtual Experience",
+      issuer: "The Forage",
+      date: "December 2025",
+      code: "Forage-9PBTqmSxAf6zZTseP",
+      pdfUrl: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_69148a51652eccc119b475f8_1765220902623_completion_certificate.pdf",
+      icon: "🎓",
+    },
   ]
 
   return (
