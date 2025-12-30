@@ -21,7 +21,7 @@ export function Hero() {
           className="inline-block"
         >
           <p className="text-accent text-sm uppercase tracking-wider font-semibold px-4 py-2 glass-light rounded-full">
-            Software Developer
+            Full Stack Developer
           </p>
         </motion.div>
         
@@ -31,7 +31,7 @@ export function Hero() {
         </h1>
         
         <p className="text-muted-foreground leading-relaxed text-lg">
-          I am a software developer passionate about solving complex problems. I excel at engineering efficient, scalable, and robust software solutions, turning ambitious ideas into production-ready applications built on clean, high-quality, and maintainable code.
+          I am a Full Stack Developer passionate about crafting seamless end-to-end web experiences. I excel at engineering scalable backend architectures and intuitive frontend designs, turning ambitious ideas into production-ready applications built on clean, high-quality code.
         </p>
 
         <div className="flex items-center gap-4 pt-4">

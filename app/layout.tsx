@@ -11,8 +11,8 @@ import { SmoothScrollProvider } from "@/components/smooth-scroll-provider"
 import { ClientBackground } from "@/components/client-background"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
+  title: "Portfolio",
+  description: "Full Stack Developer Portfolio - Tanmay Wagh",
   generator: "v0.app",
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`theme-luke font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body suppressHydrationWarning className={`theme-luke font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <ClientBackground />
         <SmoothScrollProvider>
           <Suspense fallback={null}>

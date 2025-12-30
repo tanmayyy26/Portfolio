@@ -85,9 +85,11 @@ export function Stats() {
   const ref = useRef<HTMLDivElement>(null)
   const [inView, setInView] = useState(false)
   const [hasAnimated, setHasAnimated] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
-    const alreadyAnimated = typeof window !== "undefined" && sessionStorage.getItem("tw_stats_animated") === "1"
+    setIsMounted(true)
+    const alreadyAnimated = sessionStorage.getItem("tw_stats_animated") === "1"
     if (alreadyAnimated) {
       setHasAnimated(true)
     }
@@ -121,14 +123,14 @@ export function Stats() {
   }
 
   return (
-    <div ref={ref} className="grid grid-cols-2 gap-6 rounded-xl glass p-8 md:grid-cols-4 hover:glass-strong transition-all duration-300 mt-24">
+    <div ref={ref} suppressHydrationWarning className="grid grid-cols-2 gap-6 rounded-xl glass p-8 md:grid-cols-4 hover:glass-strong transition-all duration-300 mt-24">
       {items.map((it, idx) => (
         <StatItem
           key={it.label}
           value={it.value}
           label={it.label}
           suffix={it.suffix}
-          run={!hasAnimated && inView}
+          run={isMounted && !hasAnimated && inView}
           showFinal={hasAnimated}
           onComplete={idx === 0 ? handleComplete : undefined}
         />

@@ -49,7 +49,7 @@ export function ContactSection() {
   }
 
   return (
-    <div className="grid gap-10 md:grid-cols-2">
+    <div suppressHydrationWarning className="grid gap-10 md:grid-cols-2">
       <form
         ref={formRef}
         onSubmit={onSubmit}
@@ -63,12 +63,12 @@ export function ContactSection() {
           Tell me about your project. I’ll get back within 1–2 business days.
         </p>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        <div suppressHydrationWarning className="mt-6 grid gap-4 sm:grid-cols-2">
           <Input name="firstName" placeholder="Firstname" />
           <Input name="lastName" placeholder="Lastname" />
           <Input name="email" type="email" placeholder="Email address" />
           <Input name="phone" type="tel" placeholder="Phone number" />
-          <div className="sm:col-span-2">
+          <div suppressHydrationWarning className="sm:col-span-2">
             <select
               aria-label="Select a service"
               name="service"
@@ -84,7 +84,7 @@ export function ContactSection() {
               <option>Consulting</option>
             </select>
           </div>
-          <div className="sm:col-span-2">
+          <div suppressHydrationWarning className="sm:col-span-2">
             <Textarea name="message" placeholder="Type your message here." />
           </div>
         </div>
@@ -97,7 +97,7 @@ export function ContactSection() {
         </button>
       </form>
 
-      <div ref={infoRef} className="grid gap-4 content-start">
+      <div ref={infoRef} suppressHydrationWarning className="grid gap-4 content-start">
         <InfoItem icon={<Phone className="size-5" />} title="Phone" value="8446250270" />
         <InfoItem icon={<Mail className="size-5" />} title="Email" value="2work2603@gmail.com" />
         <InfoItem icon={<MapPin className="size-5" />} title="Address" value="Nagpur, Maharashtra, 441111" />
@@ -116,11 +116,11 @@ function InfoItem({
   value: string
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-xl glass p-4 hover:glass-strong transition-all duration-300">
-      <div className="grid place-items-center size-10 rounded-md glass-light text-primary glow-primary">
+    <div suppressHydrationWarning className="flex items-center gap-4 rounded-xl glass p-4 hover:glass-strong transition-all duration-300">
+      <div suppressHydrationWarning className="grid place-items-center size-10 rounded-md glass-light text-primary glow-primary">
         {icon}
       </div>
-      <div>
+      <div suppressHydrationWarning>
         <div className="text-sm text-muted-foreground">{title}</div>
         <div className="font-medium">{value}</div>
       </div>
