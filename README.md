@@ -83,6 +83,32 @@ portfolio/
 
 ---
 
+## 🎯 Features Breakdown
+
+### Home Page
+- Hero section with animated background
+- Smooth scrolling navigation
+- Call-to-action buttons
+
+### Resume Page
+- **Experience**: Work history and positions
+- **Education**: Courses and certifications
+- **Skills**: Technical skills with icons
+- **Certificates**: Downloadable certificate PDFs
+- **About Me**: Personal bio and information
+
+### Work/Projects Page
+- Showcase of completed projects
+- Project descriptions and links
+- Responsive grid layout
+
+### Contact Page
+- Contact form with validation
+- Email integration
+- Success/error notifications
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -162,20 +188,7 @@ The project is automatically deployed to Vercel on every push to the main branch
 
 ---
 
-## 📧 Contact Form Setup
-
-### Gmail Configuration
-1. Enable 2-factor authentication on your Gmail account
-2. Generate an [App Password](https://myaccount.google.com/apppasswords)
-3. Use the app password in `SMTP_PASS` environment variable
-
-### Other Email Providers
-- Update `SMTP_HOST` and `SMTP_PORT` accordingly
-- Refer to provider's SMTP documentation
-
----
-
-## 📚 Available Scripts
+## � Available Scripts
 
 | Command | Description |
 |---------|-------------|
@@ -183,6 +196,56 @@ The project is automatically deployed to Vercel on every push to the main branch
 | `pnpm build` | Build for production |
 | `pnpm start` | Start production server |
 | `pnpm lint` | Run ESLint |
+
+---
+
+## 📧 Email Configuration
+
+### Gmail Setup
+
+1. **Enable 2-Factor Authentication**
+   - Go to [Google Account Security](https://myaccount.google.com/security)
+   - Enable 2-Step Verification
+
+2. **Generate App Password**
+   - Go to [App passwords](https://myaccount.google.com/apppasswords)
+   - Select "Mail" and "Windows Computer" (or your device)
+   - Google will generate a 16-character password
+
+3. **Update .env.local**
+   ```env
+   SMTP_HOST=smtp.gmail.com
+   SMTP_PORT=587
+   SMTP_USER=your-email@gmail.com
+   SMTP_PASS=xxxx xxxx xxxx xxxx
+   TO_EMAIL=recipient@example.com
+   ```
+
+### Other Email Providers
+
+#### Outlook/Microsoft 365
+```env
+SMTP_HOST=smtp.office365.com
+SMTP_PORT=587
+SMTP_USER=your-email@outlook.com
+SMTP_PASS=your-password
+```
+
+#### SendGrid
+```env
+SMTP_HOST=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_USER=apikey
+SMTP_PASS=SG.xxxxx...
+```
+
+#### AWS SES
+```env
+SMTP_HOST=email-smtp.region.amazonaws.com
+SMTP_PORT=587
+SMTP_USER=your-ses-username
+SMTP_PASS=your-ses-password
+```
 
 ---
 
@@ -231,6 +294,28 @@ The project is automatically deployed to Vercel on every push to the main branch
 
 ---
 
+## �️ Development Tips
+
+### Adding New Skills
+Edit `components/resume-section.tsx` - Skills Grid section:
+```tsx
+{ name: "New Skill", image: "/images/skills/skill.svg" }
+```
+
+### Adding New Projects
+Edit `components/work-section.tsx` to add project cards
+
+### Adding Certificates
+1. Add PDF to `public/images/certificates/`
+2. Update `components/resume-section.tsx` - Certificates Grid
+
+### Custom Styling
+- Tailwind CSS classes in component files
+- Global styles in `app/globals.css`
+- Theme colors in `tailwind.config.ts`
+
+---
+
 ## 📱 Browser Support
 
 - Chrome (latest)
@@ -256,6 +341,58 @@ The project is automatically deployed to Vercel on every push to the main branch
 # Change port
 pnpm dev -- -p 3001
 ```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how to get started:
+
+### Development Workflow
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/tanmayyy26/Portfolio.git
+   cd Portfolio
+   ```
+
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make your changes**
+   - Follow the existing code style
+   - Use descriptive commit messages
+   - Test your changes locally
+
+4. **Push and create a Pull Request**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+### Code Style
+
+- Use TypeScript for type safety
+- Follow React best practices
+- Use Tailwind CSS for styling
+- Keep components focused and reusable
+- Add comments for complex logic
+
+### Testing
+
+- Test locally before pushing
+- Verify responsive design
+- Test contact form functionality
+- Check animations performance
+
+### Reporting Issues
+
+Create an issue with:
+- Clear description
+- Steps to reproduce
+- Expected vs actual behavior
+- Screenshots if applicable
 
 ---
 
