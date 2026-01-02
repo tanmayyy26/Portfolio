@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 import { fadeInUp, staggerFadeIn } from "@/lib/animations"
 
-const tabs = ["Certificates", "Education", "Skills", "Experience", "About me"] as const
+const tabs = ["Certificates", "Education", "Skills", "Services", "About me"] as const
 type Tab = (typeof tabs)[number]
 
 export function ResumeSection() {
@@ -48,7 +48,7 @@ export function ResumeSection() {
       </div>
 
       <div>
-        {active === "Experience" && <ExperienceGrid />}
+        {active === "Services" && <ServicesGridResume />}
         {active === "Education" && <EducationGrid />}
         {active === "Skills" && <SkillsGrid />}
         {active === "Certificates" && <CertificatesGrid />}
@@ -78,12 +78,12 @@ function Card({
   )
 }
 
-function ExperienceGrid() {
+function ServicesGridResume() {
   const items = [
-    { title: "Full Stack Developer", subtitle: "Tech Solutions Inc." },
-    { title: "Front-End Developer Intern", subtitle: "Web Design Studio" },
-    { title: "Freelance Web Developer", subtitle: "E-commerce Startup" },
-    { title: "Teaching Assistant", subtitle: "Tech Academy" },
+    { title: "Web Development", subtitle: "Modern, performant, accessible web apps." },
+    { title: "UI/UX Design", subtitle: "Usable, elegant interfaces that convert." },
+    { title: "Logo Design", subtitle: "Memorable identities for your brand." },
+    { title: "SEO", subtitle: "Technical, on-page, and performance SEO." },
   ]
   return (
     <div className="grid gap-4 sm:grid-cols-2">

@@ -1,6 +1,6 @@
 import { Hero } from "@/components/hero"
 import { Stats } from "@/components/stats"
-import { ServicesSection } from "@/components/services-section"
+import { WorkSection } from "@/components/work-section"
 import { ResumeSection } from "@/components/resume-section"
 import { ContactSection } from "@/components/contact-section"
 
@@ -15,8 +15,8 @@ export default function HomePage() {
         <Stats />
       </section>
 
-      <section id="services" className="container mx-auto px-4 py-16 md:py-20 scroll-mt-20">
-        <ServicesSection />
+      <section id="work" className="container mx-auto px-4 py-16 md:py-20 scroll-mt-20">
+        <WorkSection />
       </section>
 
       <section id="resume" className="container mx-auto px-4 py-16 md:py-20 scroll-mt-20">
